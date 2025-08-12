@@ -14,7 +14,7 @@ const PostGeneratorUI = () => {
 
   const fetchHistory = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/posts', {
+      const res = await axios.get('https://postit-9ev4.onrender.com/api/posts', {
         headers: { 'x-auth-token': user.token }
       });
       setHistory(res.data);
@@ -37,7 +37,7 @@ const PostGeneratorUI = () => {
 
     try {
       const res = await axios.post(
-        'http://localhost:5000/api/posts/generate',
+        'https://postit-9ev4.onrender.com/api/posts/generate',
         { keywords, instructions },
         { headers: { 'x-auth-token': user.token } }
       );
